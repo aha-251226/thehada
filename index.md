@@ -68,43 +68,50 @@ permalink: /
             color: #00A0E9;
         }
         
-        /* Hero Section */
+        /* Hero Section - White Background */
         .hero {
             margin-top: 80px;
-            height: 600px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 450px;
+            background: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            padding: 80px 40px;
+        }
+        
+        .hero-content {
             text-align: center;
+            max-width: 900px;
         }
         
         .hero-content h1 {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 20px;
-            letter-spacing: -2px;
+            margin-bottom: 25px;
+            color: #1a1a1a;
+            letter-spacing: -1px;
         }
         
         .hero-content p {
-            font-size: 1.5rem;
-            font-weight: 300;
-            opacity: 0.95;
+            font-size: 1.1rem;
+            font-weight: 400;
+            line-height: 1.8;
+            color: #555;
         }
         
         /* Services Section */
         .services {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 120px 40px;
+            padding: 80px 40px;
+            background: #f8f9fa;
         }
         
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            margin-bottom: 80px;
+            margin-bottom: 60px;
             color: #1a1a1a;
         }
         
@@ -118,7 +125,7 @@ permalink: /
             background: #fff;
             border: 1px solid #e0e0e0;
             border-radius: 10px;
-            padding: 60px 40px;
+            padding: 50px 35px;
             text-align: center;
             transition: all 0.3s;
             cursor: pointer;
@@ -131,39 +138,40 @@ permalink: /
         }
         
         .service-number {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 700;
             color: #00A0E9;
             margin-bottom: 20px;
         }
         
         .service-title {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             font-weight: 700;
             margin-bottom: 10px;
             color: #1a1a1a;
         }
         
         .service-subtitle {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #888;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         
         .service-desc {
-            font-size: 1.05rem;
-            line-height: 1.8;
+            font-size: 0.95rem;
+            line-height: 1.7;
             color: #666;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
         
         .service-btn {
             display: inline-block;
-            padding: 12px 30px;
+            padding: 10px 25px;
             background: #00A0E9;
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            font-size: 0.9rem;
             font-weight: 500;
             transition: all 0.3s;
         }
@@ -172,37 +180,13 @@ permalink: /
             background: #0080c0;
         }
         
-        /* About Section */
-        .about {
-            background: #f8f9fa;
-            padding: 120px 40px;
-        }
-        
-        .about-content {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .about-content h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 30px;
-            color: #1a1a1a;
-        }
-        
-        .about-content p {
-            font-size: 1.2rem;
-            line-height: 2;
-            color: #555;
-        }
-        
         /* Footer */
         footer {
             background: #1a1a1a;
             color: #fff;
             padding: 40px;
             text-align: center;
+            font-size: 0.9rem;
         }
         
         @media (max-width: 1024px) {
@@ -217,7 +201,11 @@ permalink: /
             }
             
             .hero-content h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
             }
         }
     </style>
@@ -235,10 +223,10 @@ permalink: /
         </nav>
     </header>
     
-    <section class="hero">
+    <section id="about" class="hero">
         <div class="hero-content">
             <h1>THEHADA</h1>
-            <p>부동산 · 시공 · 연구 컨설팅</p>
+            <p>최신 기술과 풍부한 경험을 바탕으로<br>고객의 성공을 지원하는 전문 컨설팅 기업입니다</p>
         </div>
     </section>
     
@@ -268,13 +256,6 @@ permalink: /
                 <p class="service-desc">BIM, AI, LLM 기반<br>최첨단 건설 연구 컨설팅</p>
                 <a href="https://aha-251226.github.io/home" target="_blank" class="service-btn">연구 홈페이지</a>
             </div>
-        </div>
-    </section>
-    
-    <section id="about" class="about">
-        <div class="about-content">
-            <h2>THEHADA</h2>
-            <p>최신 기술과 풍부한 경험을 바탕으로<br>고객의 성공을 지원하는 전문 컨설팅 기업입니다</p>
         </div>
     </section>
     
