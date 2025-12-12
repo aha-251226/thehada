@@ -1,6 +1,6 @@
 ---
 permalink: /realestate/
-title: "부동산 컨설팅"
+title: 
 layout: single
 classes: wide
 ---
