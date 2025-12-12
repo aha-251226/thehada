@@ -8,159 +8,179 @@ classes: wide
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600&display=swap');
 
+* {
+  font-family: 'Noto Sans KR', -apple-system, sans-serif;
+}
+
 .page-wrapper {
   display: grid;
-  grid-template-columns: 250px 1fr;
-  gap: 60px;
-  max-width: 1200px;
+  grid-template-columns: 200px 1fr;
+  gap: 80px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 40px 20px;
-  font-family: 'Noto Sans KR', sans-serif;
+  padding: 60px 30px;
 }
 
 .sidebar-profile {
   position: sticky;
-  top: 100px;
+  top: 80px;
   height: fit-content;
-}
-
-.profile-card {
-  text-align: center;
-  padding: 20px;
 }
 
 .profile-image {
   width: 120px;
   height: 120px;
-  border-radius: 50%;
+  border-radius: 12px;
   object-fit: cover;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  display: block;
 }
 
 .profile-name {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 8px;
-  color: #1a1a1a;
+  margin-bottom: 12px;
+  color: #24292e;
+  line-height: 1.3;
 }
 
 .profile-bio {
-  font-size: 0.8rem;
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 15px;
+  font-size: 0.875rem;
+  color: #586069;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
-.profile-location {
-  font-size: 0.75rem;
-  color: #888;
-  margin-bottom: 12px;
+.profile-meta {
+  font-size: 0.8125rem;
+  color: #586069;
+  margin-bottom: 8px;
 }
 
 .profile-links {
   list-style: none;
   padding: 0;
-  margin: 15px 0 0 0;
+  margin: 20px 0 0 0;
+  border-top: 1px solid #e1e4e8;
+  padding-top: 20px;
 }
 
 .profile-links li {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .profile-links a {
-  color: #0366d6;
+  color: #586069;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
+  transition: color 0.2s;
 }
 
 .profile-links a:hover {
-  text-decoration: underline;
+  color: #0366d6;
 }
 
 .main-content {
-  max-width: 800px;
+  max-width: 700px;
 }
 
-.main-content h1 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin-bottom: 25px;
-  color: #1a1a1a;
+.article-header {
+  margin-bottom: 40px;
+}
+
+.article-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #24292e;
+  line-height: 1.25;
+}
+
+.article-meta {
+  font-size: 0.875rem;
+  color: #586069;
+  margin-bottom: 30px;
 }
 
 .main-content h2 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  margin: 35px 0 20px 0;
-  color: #1a1a1a;
+  margin: 40px 0 20px 0;
+  color: #24292e;
 }
 
 .main-content p {
-  font-size: 0.9rem;
-  line-height: 1.8;
-  color: #555;
-  margin-bottom: 18px;
+  font-size: 0.8125rem;
+  line-height: 1.75;
+  color: #24292e;
+  margin-bottom: 20px;
 }
 
 .main-content strong {
-  font-weight: 500;
-  font-size: 0.95rem;
-  color: #333;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  color: #24292e;
   display: block;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 12px;
 }
 
 .main-content ul {
   list-style: none;
   padding-left: 0;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .main-content li {
-  font-size: 0.85rem;
-  line-height: 1.8;
-  color: #555;
-  padding-left: 18px;
+  font-size: 0.8125rem;
+  line-height: 1.75;
+  color: #24292e;
+  padding-left: 24px;
   position: relative;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .main-content li:before {
   content: "•";
   position: absolute;
-  left: 0;
-  color: #0366d6;
+  left: 8px;
+  color: #586069;
 }
 
 @media (max-width: 768px) {
   .page-wrapper {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
   
   .sidebar-profile {
     position: relative;
     top: 0;
   }
+  
+  .article-title {
+    font-size: 1.75rem;
+  }
 }
 </style>
 
 <div class="page-wrapper">
   <aside class="sidebar-profile">
-    <div class="profile-card">
-      <img src="/thehada/assets/images/profile.jpg" alt="Profile" class="profile-image">
-      <h3 class="profile-name">박영준</h3>
-      <p class="profile-bio">부동산 컨설팅 전문가</p>
-      <p class="profile-location">서울, 대한민국</p>
-      <ul class="profile-links">
-        <li><a href="tel:010-1234-5678">010-1234-5678</a></li>
-        <li><a href="mailto:contact@thehada.com">contact@thehada.com</a></li>
-      </ul>
-    </div>
+    <img src="/thehada/assets/images/profile.jpg" alt="박영준" class="profile-image">
+    <h3 class="profile-name">박영준</h3>
+    <p class="profile-bio">부동산 컨설팅 전문가</p>
+    <div class="profile-meta">서울, 대한민국</div>
+    <ul class="profile-links">
+      <li><a href="tel:010-1234-5678">010-1234-5678</a></li>
+      <li><a href="mailto:contact@thehada.com">contact@thehada.com</a></li>
+    </ul>
   </aside>
   
   <main class="main-content">
-    <h1>부동산 컨설팅<br><span style="font-size: 0.9rem; font-weight: 400; color: #888;">Real Estate Consulting</span></h1>
+    <div class="article-header">
+      <h1 class="article-title">부동산 컨설팅</h1>
+      <div class="article-meta">Real Estate Consulting</div>
+    </div>
     
     <p>THEHADA의 부동산 컨설팅 서비스는 공장 및 창고 전문 중개를 통해 고객의 성공적인 부동산 거래를 지원합니다.</p>
     
