@@ -45,7 +45,7 @@ classes: wide
 }
 
 .profile-bio {
-  font-size: 0.875rem;
+  font-size: 0.5625rem;
   color: #586069;
   line-height: 1.5;
   margin-bottom: 20px;
@@ -114,6 +114,7 @@ classes: wide
   line-height: 1.75;
   color: #24292e;
   margin-bottom: 20px;
+  text-align: justify;
 }
 
 .main-content strong {
@@ -138,6 +139,7 @@ classes: wide
   padding-left: 24px;
   position: relative;
   margin-bottom: 8px;
+  text-align: justify;
 }
 
 .main-content li:before {
@@ -178,13 +180,10 @@ classes: wide
   
   <main class="main-content">
     <div class="article-header">
-      <h1 class="article-title">부동산 컨설팅</h1>
       <div class="article-meta">Real Estate Consulting</div>
     </div>
     
     <p>THEHADA의 부동산 컨설팅 서비스는 공장 및 창고 전문 중개를 통해 고객의 성공적인 부동산 거래를 지원합니다.</p>
-    
-    <h2>주요 서비스</h2>
     
     <strong>공장 부동산 중개</strong>
     <ul>
