@@ -1,5 +1,5 @@
 ---
-layout: splash
+layout: none
 permalink: /
 ---
 
@@ -8,7 +8,8 @@ permalink: /
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>THEHADA - 부동산·시공·연구 컨설팅</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -18,80 +19,90 @@ permalink: /
         
         body {
             font-family: 'Noto Sans KR', sans-serif;
-            overflow-x: hidden;
+            color: #333;
             background: #fff;
         }
         
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            z-index: 1000;
+        }
+        
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #00A0E9;
+            letter-spacing: -1px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 50px;
+            list-style: none;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-menu a:hover {
+            color: #00A0E9;
+        }
+        
+        /* Hero Section */
         .hero {
-            height: 100vh;
+            margin-top: 80px;
+            height: 600px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: moveBackground 20s linear infinite;
-        }
-        
-        @keyframes moveBackground {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
-        
-        .hero-content {
-            text-align: center;
             color: white;
-            z-index: 1;
+            text-align: center;
         }
         
-        .hero h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 5rem;
-            font-weight: 900;
-            margin-bottom: 1rem;
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
             letter-spacing: -2px;
         }
         
-        .hero p {
+        .hero-content p {
             font-size: 1.5rem;
             font-weight: 300;
-            margin-bottom: 3rem;
-            opacity: 0.9;
+            opacity: 0.95;
         }
         
-        .scroll-indicator {
-            position: absolute;
-            bottom: 50px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: white;
-            font-size: 2rem;
-            animation: bounce 2s infinite;
-        }
-        
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-            40% { transform: translateX(-50%) translateY(-20px); }
-            60% { transform: translateX(-50%) translateY(-10px); }
-        }
-        
+        /* Services Section */
         .services {
-            padding: 120px 5%;
-            background: #fff;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 120px 40px;
         }
         
         .section-title {
             text-align: center;
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 80px;
             color: #1a1a1a;
@@ -99,49 +110,30 @@ permalink: /
         
         .service-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 50px;
-            max-width: 1400px;
-            margin: 0 auto;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
         }
         
         .service-card {
             background: #fff;
-            border-radius: 20px;
-            padding: 50px 40px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 60px 40px;
+            text-align: center;
+            transition: all 0.3s;
             cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            transform: scaleX(0);
-            transition: transform 0.4s;
         }
         
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-        }
-        
-        .service-card:hover::before {
-            transform: scaleX(1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-color: #00A0E9;
         }
         
         .service-number {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 4rem;
-            font-weight: 900;
-            color: #f0f0f0;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #00A0E9;
             margin-bottom: 20px;
         }
         
@@ -153,11 +145,9 @@ permalink: /
         }
         
         .service-subtitle {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
-            font-weight: 400;
-            color: #667eea;
-            margin-bottom: 20px;
+            font-size: 0.95rem;
+            color: #888;
+            margin-bottom: 25px;
         }
         
         .service-desc {
@@ -169,23 +159,23 @@ permalink: /
         
         .service-btn {
             display: inline-block;
-            padding: 15px 35px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 12px 30px;
+            background: #00A0E9;
             color: white;
             text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
+            border-radius: 5px;
+            font-weight: 500;
             transition: all 0.3s;
         }
         
         .service-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+            background: #0080c0;
         }
         
+        /* About Section */
         .about {
-            padding: 120px 5%;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: #f8f9fa;
+            padding: 120px 40px;
         }
         
         .about-content {
@@ -195,43 +185,71 @@ permalink: /
         }
         
         .about-content h2 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             color: #1a1a1a;
         }
         
         .about-content p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             line-height: 2;
-            color: #444;
+            color: #555;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        @media (max-width: 1024px) {
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media (max-width: 768px) {
-            .hero h1 { font-size: 3rem; }
-            .hero p { font-size: 1.2rem; }
-            .section-title { font-size: 2rem; }
-            .service-grid { grid-template-columns: 1fr; }
+            .nav-menu {
+                display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
         }
     </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="logo">THEHADA</div>
+            <ul class="nav-menu">
+                <li><a href="#about">회사소개</a></li>
+                <li><a href="#services">사업영역</a></li>
+                <li><a href="/thehada/portfolio/">포트폴리오</a></li>
+                <li><a href="/thehada/assets/company-profile.pdf" download>회사소개서</a></li>
+            </ul>
+        </nav>
+    </header>
+    
     <section class="hero">
         <div class="hero-content">
             <h1>THEHADA</h1>
             <p>부동산 · 시공 · 연구 컨설팅</p>
         </div>
-        <div class="scroll-indicator">↓</div>
     </section>
     
-    <section class="services">
-        <h2 class="section-title">Our Services</h2>
+    <section id="services" class="services">
+        <h2 class="section-title">사업영역</h2>
         <div class="service-grid">
             <div class="service-card" onclick="location.href='/thehada/realestate/'">
                 <div class="service-number">01</div>
                 <h3 class="service-title">부동산 컨설팅</h3>
                 <p class="service-subtitle">Real Estate Consulting</p>
-                <p class="service-desc">공장 및 창고 전문 부동산 중개<br>맞춤형 산업용 부동산 솔루션 제공</p>
+                <p class="service-desc">공장 및 창고 전문 부동산 중개<br>맞춤형 산업용 부동산 솔루션</p>
                 <a href="/thehada/realestate/" class="service-btn">자세히 보기</a>
             </div>
             
@@ -239,7 +257,7 @@ permalink: /
                 <div class="service-number">02</div>
                 <h3 class="service-title">시공 컨설팅</h3>
                 <p class="service-subtitle">Construction Consulting</p>
-                <p class="service-desc">축적된 경험과 노하우로<br>성공적인 프로젝트 수행</p>
+                <p class="service-desc">축적된 경험과 노하우<br>성공적인 프로젝트 수행</p>
                 <a href="/thehada/portfolio/" class="service-btn">포트폴리오</a>
             </div>
             
@@ -253,11 +271,15 @@ permalink: /
         </div>
     </section>
     
-    <section class="about">
+    <section id="about" class="about">
         <div class="about-content">
             <h2>THEHADA</h2>
             <p>최신 기술과 풍부한 경험을 바탕으로<br>고객의 성공을 지원하는 전문 컨설팅 기업입니다</p>
         </div>
     </section>
+    
+    <footer>
+        <p>&copy; 2025 THEHADA. All rights reserved.</p>
+    </footer>
 </body>
 </html>
