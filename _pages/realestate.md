@@ -37,7 +37,7 @@ classes: wide
 }
 
 .profile-name {
-  font-size: 1.1rem;
+  font-size: 0.88rem;
   font-weight: 600;
   margin-bottom: 12px;
   color: #24292e;
@@ -45,14 +45,14 @@ classes: wide
 }
 
 .profile-bio {
-  font-size: 0.5625rem;
+  font-size: 0.45rem;
   color: #586069;
   line-height: 1.5;
   margin-bottom: 20px;
 }
 
 .profile-meta {
-  font-size: 0.8125rem;
+  font-size: 0.65rem;
   color: #586069;
   margin-bottom: 8px;
 }
@@ -72,7 +72,7 @@ classes: wide
 .profile-links a {
   color: #586069;
   text-decoration: none;
-  font-size: 0.8125rem;
+  font-size: 0.65rem;
   transition: color 0.2s;
 }
 
@@ -89,7 +89,7 @@ classes: wide
 }
 
 .article-title {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 10px;
   color: #24292e;
@@ -97,20 +97,20 @@ classes: wide
 }
 
 .article-meta {
-  font-size: 0.875rem;
+  font-size: 0.7rem;
   color: #586069;
   margin-bottom: 30px;
 }
 
 .main-content h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   margin: 40px 0 20px 0;
   color: #24292e;
 }
 
 .main-content p {
-  font-size: 0.8125rem;
+  font-size: 0.65rem;
   line-height: 1.75;
   color: #24292e;
   margin-bottom: 20px;
@@ -119,7 +119,7 @@ classes: wide
 
 .main-content strong {
   font-weight: 600;
-  font-size: 0.8125rem;
+  font-size: 0.65rem;
   color: #24292e;
   display: block;
   margin-top: 30px;
@@ -133,7 +133,7 @@ classes: wide
 }
 
 .main-content li {
-  font-size: 0.8125rem;
+  font-size: 0.65rem;
   line-height: 1.75;
   color: #24292e;
   padding-left: 24px;
@@ -161,7 +161,7 @@ classes: wide
   }
   
   .article-title {
-    font-size: 1.75rem;
+    font-size: 1.4rem;
   }
 }
 </style>
