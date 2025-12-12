@@ -59,8 +59,8 @@ permalink: /
         .nav-menu a {
             text-decoration: none;
             color: #333;
-            font-size: 1rem;
-            font-weight: 500;
+            font-size: 0.8em;
+            font-weight: 300;
             transition: color 0.3s;
         }
         
