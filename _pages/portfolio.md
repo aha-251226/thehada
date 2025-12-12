@@ -1,6 +1,6 @@
 ---
 permalink: /portfolio/
-title: "시공 포트폴리오"
+title: ""
 layout: single
 classes: wide
 ---
@@ -52,13 +52,25 @@ classes: wide
   background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 50%);
   display: flex;
   align-items: flex-start;
-  justify-content: center;
-  padding: 60px 40px;
+  justify-content: flex-start;
+  padding: 60px 60px;
 }
 
 .slide-label {
-  font-size: 2.5rem;
-  font-weight: 700;
+  text-align: left;
+}
+
+.slide-label-ko {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+  margin-bottom: 5px;
+}
+
+.slide-label-en {
+  font-size: 1rem;
+  font-weight: 400;
   color: white;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
@@ -105,8 +117,12 @@ classes: wide
 }
 
 @media (max-width: 768px) {
-  .slide-label {
-    font-size: 1.5rem;
+  .slide-label-ko {
+    font-size: 1rem;
+  }
+  
+  .slide-label-en {
+    font-size: 0.875rem;
   }
   
   .nav-button {
@@ -116,86 +132,73 @@ classes: wide
 }
 </style>
 
-<div class="portfolio-slider">
-  <!-- Office Slides -->
-  <div class="slide active">
-    <img src="/thehada/assets/images/office/1.jpg" alt="Office 1">
-    <div class="slide-overlay">
-      <div class="slide-label">사무공간 (Office)</div>
-    </div>
-  </div>
-  
-  <div class="slide">
-    <img src="/thehada/assets/images/office/2.jpg" alt="Office 2">
-    <div class="slide-overlay">
-      <div class="slide-label">사무공간 (Office)</div>
-    </div>
-  </div>
-  
-  <div class="slide">
-    <img src="/thehada/assets/images/office/3.jpg" alt="Office 3">
-    <div class="slide-overlay">
-      <div class="slide-label">사무공간 (Office)</div>
-    </div>
-  </div>
-  
-  <div class="slide">
-    <img src="/thehada/assets/images/office/4.jpg" alt="Office 4">
-    <div class="slide-overlay">
-      <div class="slide-label">사무공간 (Office)</div>
-    </div>
-  </div>
-  
-  <div class="slide">
-    <img src="/thehada/assets/images/office/5.jpg" alt="Office 5">
-    <div class="slide-overlay">
-      <div class="slide-label">사무공간 (Office)</div>
-    </div>
-  </div>
-  
-  <!-- Commercial Slides -->
-  <div class="slide">
-    <img src="/thehada/assets/images/commercial/1.jpg" alt="Commercial 1">
-    <div class="slide-overlay">
-      <div class="slide-label">상업공간 (Commercial)</div>
-    </div>
-  </div>
-  
-  <div class="slide">
-    <img src="/thehada/assets/images/commercial/2.jpg" alt="Commercial 2">
-    <div class="slide-overlay">
-      <div class="slide-label">상업공간 (Commercial)</div>
-    </div>
-  </div>
-  
-  <div class="slide">
-    <img src="/thehada/assets/images/commercial/3.jpg" alt="Commercial 3">
-    <div class="slide-overlay">
-      <div class="slide-label">상업공간 (Commercial)</div>
-    </div>
-  </div>
-  
-  <div class="slide">
-    <img src="/thehada/assets/images/commercial/4.jpg" alt="Commercial 4">
-    <div class="slide-overlay">
-      <div class="slide-label">상업공간 (Commercial)</div>
-    </div>
-  </div>
-  
-  <div class="slide">
-    <img src="/thehada/assets/images/commercial/5.jpg" alt="Commercial 5">
-    <div class="slide-overlay">
-      <div class="slide-label">상업공간 (Commercial)</div>
-    </div>
-  </div>
-  
+<div class="portfolio-slider" id="slider">
   <button class="nav-button prev-button" onclick="changeSlide(-1)">‹</button>
   <button class="nav-button next-button" onclick="changeSlide(1)">›</button>
-  <div class="slide-counter"><span id="current">1</span> / <span id="total">10</span></div>
+  <div class="slide-counter"><span id="current">1</span> / <span id="total">0</span></div>
 </div>
 
 <script>
+// 이미지 목록 정의
+const images = [
+  // Office 이미지
+  { src: '/thehada/assets/images/office/_GSS7942.jpg', category: '사무공간', categoryEn: 'Office' },
+  { src: '/thehada/assets/images/office/_GSS7954.jpg', category: '사무공간', categoryEn: 'Office' },
+  { src: '/thehada/assets/images/office/_GSS7957.jpg', category: '사무공간', categoryEn: 'Office' },
+  { src: '/thehada/assets/images/office/_GSS7970.jpg', category: '사무공간', categoryEn: 'Office' },
+  { src: '/thehada/assets/images/office/_GSS7994.jpg', category: '사무공간', categoryEn: 'Office' },
+  { src: '/thehada/assets/images/office/_GSS8003.jpg', category: '사무공간', categoryEn: 'Office' },
+  { src: '/thehada/assets/images/office/1.jpg', category: '사무공간', categoryEn: 'Office' },
+  { src: '/thehada/assets/images/office/1-1.jpg', category: '사무공간', categoryEn: 'Office' },
+  { src: '/thehada/assets/images/office/05.jpg', category: '사무공간', categoryEn: 'Office' },
+  { src: '/thehada/assets/images/office/06.jpg', category: '사무공간', categoryEn: 'Office' },
+  { src: '/thehada/assets/images/office/07.jpg', category: '사무공간', categoryEn: 'Office' },
+  { src: '/thehada/assets/images/office/12.jpg', category: '사무공간', categoryEn: 'Office' },
+  { src: '/thehada/assets/images/office/03.jpg', category: '사무공간', categoryEn: 'Office' },
+  { src: '/thehada/assets/images/office/_GSS7819.jpg', category: '사무공간', categoryEn: 'Office' },
+  { src: '/thehada/assets/images/office/_GSS7894.jpg', category: '사무공간', categoryEn: 'Office' },
+  { src: '/thehada/assets/images/office/01.jpg', category: '사무공간', categoryEn: 'Office' },
+  { src: '/thehada/assets/images/office/02.jpg', category: '사무공간', categoryEn: 'Office' },
+  
+  // Commercial 이미지
+  { src: '/thehada/assets/images/commercial/_GSS7942.jpg', category: '상업공간', categoryEn: 'Commercial' },
+  { src: '/thehada/assets/images/commercial/_GSS7954.jpg', category: '상업공간', categoryEn: 'Commercial' },
+  { src: '/thehada/assets/images/commercial/_GSS7957.jpg', category: '상업공간', categoryEn: 'Commercial' },
+  { src: '/thehada/assets/images/commercial/_GSS7970.jpg', category: '상업공간', categoryEn: 'Commercial' },
+  { src: '/thehada/assets/images/commercial/_GSS7994.jpg', category: '상업공간', categoryEn: 'Commercial' },
+  { src: '/thehada/assets/images/commercial/_GSS8003.jpg', category: '상업공간', categoryEn: 'Commercial' },
+  { src: '/thehada/assets/images/commercial/1.jpg', category: '상업공간', categoryEn: 'Commercial' },
+  { src: '/thehada/assets/images/commercial/1-1.jpg', category: '상업공간', categoryEn: 'Commercial' },
+  { src: '/thehada/assets/images/commercial/05.jpg', category: '상업공간', categoryEn: 'Commercial' },
+  { src: '/thehada/assets/images/commercial/06.jpg', category: '상업공간', categoryEn: 'Commercial' },
+  { src: '/thehada/assets/images/commercial/07.jpg', category: '상업공간', categoryEn: 'Commercial' },
+  { src: '/thehada/assets/images/commercial/12.jpg', category: '상업공간', categoryEn: 'Commercial' },
+  { src: '/thehada/assets/images/commercial/03.jpg', category: '상업공간', categoryEn: 'Commercial' },
+  { src: '/thehada/assets/images/commercial/_GSS7819.jpg', category: '상업공간', categoryEn: 'Commercial' },
+  { src: '/thehada/assets/images/commercial/_GSS7894.jpg', category: '상업공간', categoryEn: 'Commercial' },
+  { src: '/thehada/assets/images/commercial/01.jpg', category: '상업공간', categoryEn: 'Commercial' },
+  { src: '/thehada/assets/images/commercial/02.jpg', category: '상업공간', categoryEn: 'Commercial' },
+];
+
+const slider = document.getElementById('slider');
 let currentSlide = 0;
+
+// 슬라이드 생성
+images.forEach((img, index) => {
+  const slideDiv = document.createElement('div');
+  slideDiv.className = 'slide' + (index === 0 ? ' active' : '');
+  slideDiv.innerHTML = `
+    <img src="${img.src}" alt="${img.category}">
+    <div class="slide-overlay">
+      <div class="slide-label">
+        <div class="slide-label-ko">${img.category}</div>
+        <div class="slide-label-en">${img.categoryEn}</div>
+      </div>
+    </div>
+  `;
+  slider.insertBefore(slideDiv, slider.firstChild);
+});
+
 const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
 document.getElementById('total').textContent = totalSlides;
