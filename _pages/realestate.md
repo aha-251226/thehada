@@ -30,47 +30,47 @@ classes: wide
 }
 
 .profile-image {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .profile-name {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: #1a1a1a;
 }
 
 .profile-bio {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #666;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .profile-location {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: #888;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .profile-links {
   list-style: none;
   padding: 0;
-  margin: 20px 0 0 0;
+  margin: 15px 0 0 0;
 }
 
 .profile-links li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .profile-links a {
   color: #0366d6;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .profile-links a:hover {
@@ -82,48 +82,48 @@ classes: wide
 }
 
 .main-content h1 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   color: #1a1a1a;
 }
 
 .main-content h2 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  margin: 40px 0 20px 0;
+  margin: 35px 0 20px 0;
   color: #1a1a1a;
 }
 
 .main-content p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.8;
   color: #555;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .main-content strong {
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #333;
   display: block;
-  margin-top: 25px;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
 .main-content ul {
   list-style: none;
   padding-left: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .main-content li {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   line-height: 1.8;
   color: #555;
-  padding-left: 20px;
+  padding-left: 18px;
   position: relative;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .main-content li:before {
@@ -151,16 +151,16 @@ classes: wide
       <img src="/thehada/assets/images/profile.jpg" alt="Profile" class="profile-image">
       <h3 class="profile-name">박영준</h3>
       <p class="profile-bio">부동산 컨설팅 전문가</p>
-      <p class="profile-location">📍 서울, 대한민국</p>
+      <p class="profile-location">서울, 대한민국</p>
       <ul class="profile-links">
-        <li>📞 <a href="tel:010-1234-5678">010-1234-5678</a></li>
-        <li>✉️ <a href="mailto:contact@thehada.com">contact@thehada.com</a></li>
+        <li><a href="tel:010-1234-5678">010-1234-5678</a></li>
+        <li><a href="mailto:contact@thehada.com">contact@thehada.com</a></li>
       </ul>
     </div>
   </aside>
   
   <main class="main-content">
-    <h1>부동산 컨설팅<br><span style="font-size: 1rem; font-weight: 400; color: #888;">Real Estate Consulting</span></h1>
+    <h1>부동산 컨설팅<br><span style="font-size: 0.9rem; font-weight: 400; color: #888;">Real Estate Consulting</span></h1>
     
     <p>THEHADA의 부동산 컨설팅 서비스는 공장 및 창고 전문 중개를 통해 고객의 성공적인 부동산 거래를 지원합니다.</p>
     
